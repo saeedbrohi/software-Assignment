@@ -27,4 +27,4 @@ Shigeru Chiba
 >>Chair(s): Dimitris Kolovos
 ## Abstract
 
-a quick brown fox jumps over the lazy dog
+
