@@ -1,15 +1,21 @@
 # An Empirical Study of Method Chaining in Java
 
+
 # Authors
 Tomoki Nakamaru, 
 
 ![Image](./image1.jpg)
 
-Tomomasa Matsunaga, 
+**_Tomomasa Matsunaga_**, 
 
 Tetsuro Yamazaki, 
 
-Soramichi Akiyama, 
+Soramichi Akiyama,
+
+![Image](./image2.jpg)
+
+
+
 
 Shigeru Chiba
 
@@ -18,3 +24,4 @@ Shigeru Chiba
 >Venue:Mon 29 Jun 2020 10:48 - 10:54 at MSR:Zoom - Programming Languages & Models 
 
 >>Chair(s): Dimitris Kolovos
+## Abstract
