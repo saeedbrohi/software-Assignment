@@ -52,3 +52,26 @@ The newly proposed code comment inconsistency approach has
 been experimented with publicly available Java code-comment
 pairs dataset and siamese network. This section elaborates those
 experimental details and statistical findings accordingly.
+Some works took place in this area. 1st work found is done by Tan
+et. al where they proposed an approach, tan2007icomment to detect
+code comment inconsistency in locking and calling mechanism.
+Their scope is bound to the comments related to programmers’
+
+assumptions and requirements. In this work they skip those com-
+ments related to program explanation of code segments.
+
+Another tool named tcomment [12] was proposed by Tan et. al
+for testing Javadoc comments, where method properties about null
+
+values and related exceptions are considered specifically. The au-
+thors set some rules for parameter tags in javadoc comments where
+
+null parameter java exception statements are checked. Finally, they
+used NLP with those rules to match if there are inconsistencies
+between codes and javadoc comments. The scope of their work is
+bound to null reference and throwing exceptions related comments.
+Ratol et. al introduced an eclipse plugin called fraco [8] to detect
+fragile comments while renaming identifiers. The authors created
+guidelines as well as defined scope of comments to link with their
+responsive codes. They applied a rule based approach to detect
+fragile comments using the code and their linked comments.
