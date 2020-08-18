@@ -21,6 +21,20 @@ Wed 15 Jul 2020 02:15 - 02:30 at ICPC - Session 10: Documentation Chair(s): Gias
 
 ## Abstract:
 
+This paper proposes a solution to detect code comment inconsis-
+tency considering program and comment comprehension using
+a siamese recurrent network. In the proposed siamese network,
+there are 2 seperate RNN-LSTM models who are responsible for
+analyzing codes and comments and representing them into vectors.
+Then, similarity between code and comments can be measured
+using the two vectors and based on the similarity inconsistency
+is predicted. This work open a new dimension in the field of pro-
+gram comprehension to measure similarity between two languages
+(codes, comments etc). In future we plan to apply our proposed
+system into other section of software engineering for similarity
+measurement. We hope that, code-code similarity, code cloning
+detection and other types of similar works can be possible using
+our proposed architecture.
 Comments are the internal documentation of corresponding code blocks, which are essential to understand and maintain a software. In large scale software development, developers need to analyze existing codes, where comments assist better readability. In practice, developers commonly ignore comments’ updating with respect to changing codes, which leads the code comment inconsistency. Traditionally researchers detect these inconsistencies based on codecomment tokens. However, sequence ordering in codecomments is ignored in existing solution, as a result inconsistencies for invalid sequences of codes and comments are neglected. This paper solves these inconsistencies using siamese recurrent network which uses word tokens in codes and comments as well as their sequences in corresponding codes or comments. Proposed approach has been evaluated with a benchmark dataset, along with the ability of detecting invalid code comment sequence is examined.
 As a result, it misleads the new developers and later may introduce
 bugs. So, if a system can automatically detect the inconsistency
