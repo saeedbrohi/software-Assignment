@@ -150,6 +150,43 @@ data used in Elasticsearch.
  They found 30 chains (10.7%) using immutable collection
 builders (e.g. ImmutableSet.Builder) in this library.
 Java Std. Lib. They found 18 chains (6.43%) using StringBuilder
-or StringBuffer in java.lang
+or StringBuffer in java.lang.
 
-                        THE END
+
+
+
+
+
+ HOW CAN WE EXTEND JAVA?
+
+To investigate what language features (or library design) needs to
+be supported to encourage the use of the method-chaining style,
+we manually analyzed randomly-sampled 385 chains and the code
+around them. Since we are interested in why method invocations
+are not chained, the population of the random sampling was the
+chains of all lengths (including non-chained invocations) in 2018.
+We attempted to find code patterns that could be transformed
+into the method-chaining style if Java supported an appropriate
+language feature or the library supported appropriate API design. In
+what follows, we present the found patterns with their description
+by example and the number of their occurrences in the randomlysampled dataset. We then present appropriate language features
+or API design for those patterns. At the end of this subsection, we
+summarize the estimated ratios of those patterns in the population.
+
+                            THE END
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
