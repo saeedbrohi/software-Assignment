@@ -102,4 +102,51 @@ and the log file. They asked the developers to fill out a short form
 in case their extraction was not correct. In the survey, they asked the
 developer to paste in the log part actually describing the failure
 reason or describe in their own words why our original extraction
-was incorrect.
+was incorrect
+Results. In total, from 2019-10-15 to 2019-10-17, they sent out
+emails to 246 developers. Of these, 32 could not be delivered. They
+performed the sending out in three batches and used the first author’s academic email address as the sender. All emails were specific
+to each recipient. They only sent one mail per recipient. They received
+answers from 61 developers, corresponding to 144 build logs with
+a response rate of 24.8%. Compared to typical response rates to
+cold calling known from Software Engineering [16], this is very
+high. They believe that their personalization and the ease of use for the
+participant are the main reasons for this—simply clicking on a link
+to confirm or refute an answer is enough, there is no need to craft
+an answer. Indeed, they only received seven replies from developers
+along the lines of “done.”
+Of the 144 answers, 118 initially indicated that their extraction
+was correct. They manually inspected the 26 negative answers and
+found that some stated that the proposed extraction did not show
+the whole description of why the build failed. This was because They
+chose to trim long chunks to keep the mails readable, and not a fault
+in their extraction per se. After adjusting for these answers, only
+12 answers remained that stated that their labeled log chunk was
+not correct. This validates our data set with an externally validated
+consensus on 94.4% of the extracted data.
+One of their 12 incorrect extractions only showed a warning and
+the developer proposed to also include the line stating that warnings
+are treated as errors. In others, we labeled the error message of an
+error that was later ignored.
+
+ ## DATA SCHEMA
+
+This section presents the internal structure and data schema of
+LogChunks. In principle, LogChunks comprises automatically retrieved and manually labeled and cross-validated logs.
+LogChunks comprises information on 797 build logs, which are
+organized in folders for each language and repository. For each
+repository, LogChunks has about 10 Examples. Every repository
+folder contains the full log files for the build status ‘failed’ in plain
+text.
+Structural Category. For each repository, they assign structural
+categories to the Chunks. The structural category compares how
+Chunks are represented within the build log. Build tools highlight
+their error messages with markings, e.g. starting each line with
+“ERROR” or surrounding special characters. Two chunks fall into
+the same structural categories if they are surrounded by the same
+markings. Listing 2 presents a log chunk from the same category.
+ In comparison to that, Listing 3
+presents a log chunk which is formatted differently within the log
+file. For each repository, the structural categories are represented
+as integers, starting at 0 and increased with the next appearing
+category in chronological build order.
