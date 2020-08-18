@@ -150,3 +150,45 @@ presents a log chunk which is formatted differently within the log
 file. For each repository, the structural categories are represented
 as integers, starting at 0 and increased with the next appearing
 category in chronological build order.
+
+
+## RELATED DATA SETS
+This section presents existing data sets of CI build logs and how
+LogChunks differs from them.
+
+  + TravisTorrent
+
+TravisTorrent [3] collects a broad range of metadata about Travis CI
+builds. It combines data accessible through the public Travis CI and
+GitHub APIs and through GHTorrent [9]. Similar to LogChunks,
+among the metadata are the failing test cases. However, TravisTorrent obtained these through a manually developed parser, which
+only supports specific Ruby test runners and Java Maven or JUnit
+logs. Anecdotally, many of the failing tests are at least incomplete
+and lack validation. By contrast, LogChunks provides manually labeled and two-fold cross-validated data of why builds failed, not
+only for failing tests like TravisTorrent, but for all possible buildfailing errors.
+
+
+## FUTURE EXTENSIONS TO LOGCHUNKS
+In this section, they describe current limitations and future improvements of LogChunks and extensions they are planning.
+Chunk as One Consecutive Substring. The Chunk contains only
+one continuous substring of the log text. The reason a build failed
+could be described at multiple locations within the log. They propose
+to extend LogChunks to contain multiple substrings of the log text.
+Include More Repositories and Logs. LogChunks encompasses a
+range of repositories from various main development languages,
+though only 10 logs from each repository. Including more logs and
+repositories will strengthen LogChunks as the go-to benchmark.
+Classification of the Build Failure Cause. Our data set contains
+no further classification according to the cause of the failure, such
+as due to tests, compilation or linter errors. As researchers are
+investigating why CI builds fail, a useful extension is to annotate
+cause of the build failure for each log.
+Other Information Chunks. Build log analysis is not limited to the
+chunk that describes why a build failed. LogChunks can be extended
+with labels for all information that is contained in the build log,
+such as descriptions of warnings, build infrastructure and more.
+Validation of Search Keywords. The keywords LogChunks provides are based on the experience of the authors gained from analyzing around 800 build logs. Next, they propose to evaluate whether
+these keywords would also be used by developers to find the log
+chunk describing why a build failed.
+
+                             THE END
