@@ -140,3 +140,16 @@ indicates that various libraries are used to compose extremely long
 chains. However, a large bias exists in the number of appearances
 of each library: 53.5% of the libraries are used only once; Three
 libraries constitute 43.9% of the appearances. The following summarizes the most-used three libraries:
+
+
+ + Elasticsearch4:
+ They found 75 chains (26.8%) using XContentFactory
+or XContentBuilder in this library. Those classes are for building
+data used in Elasticsearch.
++ Guava5:
+ They found 30 chains (10.7%) using immutable collection
+builders (e.g. ImmutableSet.Builder) in this library.
+Java Std. Lib. They found 18 chains (6.43%) using StringBuilder
+or StringBuffer in java.lang
+
+                        THE END
